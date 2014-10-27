@@ -1,0 +1,117 @@
+/**
+ * This is a class that tests the Card class.
+ */
+public class CardTester {
+
+	/**
+	 * The main method in this class checks the Card operations for consistency.
+	 *	@param args is not used.
+	 */
+	public static void main(String[] args) {
+		//setting up objects
+		Card aceOfSpades = new Card ("Spades", "Ace", 16);
+		Card kingOfHearts = new Card ("Spades", "Aces", 16);
+		Card jokerOfJokes = new Card ("Any", "Joker", 100);
+		
+		//testing toString method
+		System.out.println(aceOfSpades.toString());
+		System.out.println(kingOfHearts.toString());
+		System.out.println(jokerOfJokes.toString());
+		
+		//testing matches method
+		if(aceOfSpades.matches(kingOfHearts)){
+			System.out.println("Are you high right now?");
+		}
+		if(aceOfSpades.matches(jokerOfJokes)){
+			System.out.println("THIS IS NOT RIGHT!");
+		}
+		if(jokerOfJokes.matches(kingOfHearts)){
+			System.out.println("NO WAY IN HELL DOES THIS WORK!");
+		}
+		
+		System.out.println(aceOfSpades.rank() + " " + aceOfSpades.suit() + " " + aceOfSpades.pointValue());
+		System.out.println(kingOfHearts.rank() + " " + kingOfHearts.suit() + " " + kingOfHearts.pointValue());
+		System.out.println(jokerOfJokes.rank() + " " + jokerOfJokes.suit() + " " + jokerOfJokes.pointValue());
+	}
+}
+
+
+/**
+ * Card.java
+ *
+ * <code>Card</code> represents a playing card.
+ */
+public class Card {
+	 //String value that holds the suit of the card
+	private String suit;
+	 //String value that holds the rank of the card
+	private String rank;
+	 //int value that holds the point value.
+	private int pointValue;
+	
+	
+   /**
+	 * Creates a new <code>Card</code> instance.
+	 *
+	 * @param cardRank  a <code>String</code> value
+	 *                  containing the rank of the card
+	 * @param cardSuit  a <code>String</code> value
+	 *                  containing the suit of the card
+	 * @param cardPointValue an <code>int</code> value
+	 *                  containing the point value of the card
+	 */	
+	public Card(String cardRank, String cardSuit, int cardPointValue) {
+		rank = cardRank;
+		suit = cardSuit;
+		pointValue = cardPointValue;
+	}
+
+
+	/**
+	 * Accesses this <code>Card's</code> suit.
+	 * @return this <code>Card's</code> suit.
+	 */
+	public String suit()
+	{
+		return suit;
+	}
+	public String rank()
+	{
+		return rank;
+	}
+	public int pointValue()
+	{
+		return pointValue;
+	}
+
+	
+	
+	/** Compare this card with the argument.
+	 * @param otherCard the other card to compare to this
+	 * @return true if the rank, suit, and point value of this card
+	 *              are equal to those of the argument;
+	 *         false otherwise.
+	 */
+	public boolean matches(Card otherCard) {
+		if (rank == otherCard.rank() && suit == otherCard.suit() && pointValue == otherCard.pointValue()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * Converts the rank, suit, and point value into a string in the format
+	 *     "[Rank] of [Suit] (point value = [PointValue])".
+	 * This provides a useful way of printing the contents
+	 * of a <code>Deck</code> in an easily readable format or performing
+	 * other similar functions.
+	 *
+	 * @return a <code>String</code> containing the rank, suit,
+	 *         and point value of the card.
+	 */
+	@Override
+	public String toString() {
+		return suit = " " + rank +" " +pointValue;
+	}
+}
