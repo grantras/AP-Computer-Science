@@ -1,0 +1,75 @@
+import java.util.Scanner;
+
+
+public class StartSwagometer
+{
+
+  public static void main(String[] args)
+  {
+    Scanner nameScan = new Scanner(System.in);
+    System.out.println("Please enter your name");
+    String name2 = nameScan.nextLine();
+    
+    System.out.println("Please enter your car");
+    String car2 = nameScan.nextLine();
+    
+    System.out.println("How much moolah you got bish?");
+    int money2 = nameScan.nextInt();
+    
+    Swagometer swagger = new Swagometer(name2, car2, money2);
+    
+    swagger.getSwagLevel();
+  }
+
+}
+
+import java.util.*;
+
+public class Swagometer {
+  
+        int swagLevel = 0;
+        int nameSwagLevel;
+        int carSwagLevel;
+        int moneySwagLevel;
+        String name;
+        String car;
+        String money;
+        
+        public Swagometer(String name, String car, int money) {
+        }
+        
+        public void nameSwag (String name) {
+            int nameLength = name.length();
+            if (nameLength <= 3) {
+                nameSwagLevel = 3; 
+            } else if (nameLength < 6) {
+                nameSwagLevel = 6;
+            }
+        }
+        
+        public void carSwag(String car) {
+            int carLevel = car.length();
+            if (carLevel <= 3) {
+                carSwagLevel = 3;
+            } else if (carLevel <= 10) {
+                carSwagLevel = 10;
+            }
+        }
+        
+        public void moneySwag(int money) {
+            if (money <= 2000) {
+                moneySwagLevel = 4;
+            } else if (money <= 10000) {
+                moneySwagLevel = 10;
+            }
+        }
+        
+        public void getSwagLevel() {
+            int swagLevel = (nameSwagLevel + carSwagLevel + moneySwagLevel)/3;
+            if (swagLevel <= 4) {
+                System.out.println("You a broke ass homeskillet with no swag doe.");
+            } else if (swagLevel >= 4) {
+                System.out.println("OoO you fancy huh. You fancy huh. Eyooo Kanye!");
+            }
+        }
+    }
