@@ -1,0 +1,113 @@
+/*
+Written by Joe Sweeney (JeTroll), Grant Rassmussen (grantras) and Cooper Pellaton (cooppell) November 2014.
+The class that loads our audio into cache and which sets up everything for the frame class.
+*/
+
+import java.io.File;
+import java.io.IOException;
+
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.SourceDataLine;
+import java.util.concurrent.Executor;
+
+public class SoundPlay implements Executor
+{
+  private SourceDataLine line = null;
+  private byte[] audioBytes;
+  private int numBytes;
+  
+  public SoundPlay(String fileName)
+  {
+    File  soundFile = new File(fileName);
+    AudioInputStream audioInputStream = null;
+    try
+    {
+      audioInputStream = AudioSystem.getAudioInputStream(soundFile);
+    }
+    catch (Exception ex)
+    {
+      System.out.println("*** Cannot find " + fileName + " ***");
+      //System.exit(1);
+    }
+
+    AudioFormat audioFormat = audioInputStream.getFormat();
+    DataLine.Info info = new DataLine.Info(SourceDataLine.class,
+                         audioFormat);
+    try
+    {
+      line = (SourceDataLine)AudioSystem.getLine(info);
+      line.open(audioFormat);
+    }
+    catch (LineUnavailableException ex)
+    {
+      System.out.println("*** Audio line unavailable ***");
+      //System.exit(1);
+    }
+
+    line.start();
+
+    audioBytes = new byte[(int)soundFile.length()];
+
+    try
+    {
+      numBytes = audioInputStream.read(audioBytes, 0, audioBytes.length);
+    }
+    catch (IOException ex)
+    {
+      System.out.println("*** Cannot read " + fileName + " ***");
+      System.exit(1);
+    }
+  }
+
+  public void play()
+  {
+    line.write(audioBytes, 0, numBytes);
+  }
+}
+
+// How we make the window and the objects that are used to control the soundboard 
+import javax.swing.JFrame;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JButton;
+
+class SFrame extends JFrame implements ActionListener{
+  
+  protected JButton b1, b2;
+    
+  public SFrame(){
+    super("Title");
+    b1 = new JButton("test");
+    b2 = new JButton("test2");
+    
+    setLayout(new FlowLayout());
+    add(b1);
+    add(b2);
+    
+    b1.addActionListener(this);
+    b1.setActionCommand("test");
+    b2.addActionListener(this);
+    b2.setActionCommand("test2");
+  }
+  
+  public void actionPerformed(ActionEvent e){
+    if("test".equals(e.getActionCommand())){
+      System.out.println("test");
+    }
+    else if("test2".equals(e.getActionCommand())){
+      System.out.println("test2");
+    }
+  }
+}
+
+/*
+The bullshit Sudoku class that we added to comply with the project requirements.
+It REALLY lets you play Sudoku though!
+*/
