@@ -1,5 +1,6 @@
 /*
-Written by Joe Sweeney (Jeteroll), Grant Rassumusen (grantras) and Cooper Pellaton (cooperpell) in Novembre 2014.
+Written by Joe Sweeney (Jeteroll), Grant Rassumusen (grantras) and Cooper Pellaton (cooperpell) in November 2014.
+*/
 
 import javax.swing.JFrame;
 import java.awt.FlowLayout;
