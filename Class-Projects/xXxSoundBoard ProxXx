@@ -1,5 +1,5 @@
 /*
-Written by Joe Sweeney (JeTroll), Grant Rassmussen (grantras) and Cooper Pellaton (cooppell) November 2014.
+Written by Joe Sweeney (Jeteroll), Grant Rassmussen (grantras) and Cooper Pellaton (cooppell) November 2014.
 The class that loads our audio into cache and which sets up everything for the frame class.
 */
 
