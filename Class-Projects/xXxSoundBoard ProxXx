@@ -108,6 +108,6 @@ class SFrame extends JFrame implements ActionListener{
 }
 
 /*
-The bullshit Sudoku class that we added to comply with the project requirements.
+The Sudoku class that we added to comply with the project requirements.
 It REALLY lets you play Sudoku though!
 */
