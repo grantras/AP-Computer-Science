@@ -26,3 +26,12 @@
 8. count += ((total/pages)-5)* words - 1 
 9. System.out.println(.5*(g*t*t));
 10. There is already a method for this. Math.round() 
+  double x = 2.5;
+  int y;
+  if (x % .5 == 0) {
+    		y = (int)x;
+      	} else {
+		    x = Math.round(x);
+	      }
+	      y = (int)x;
+	System.out.print(y);
