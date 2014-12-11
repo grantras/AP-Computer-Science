@@ -1,0 +1,38 @@
+1.There are 5 if statements, 2 of them use an else clause.
+2. The assignment is specifically to locate, and not to record, therefore I am not recording them here explicitly. 
+3. The answer is below.
+  public static int max(int x, int y)
+  {
+	  if (x>y) 
+		  return x;
+	  else 
+		  return y;
+  }
+4. The answer is below.
+  public class totalWages {
+	  public double totalWages (double hours, double rate)
+	  {
+		  double wages;
+		  if (hours>40)
+			  rate = rate*1.5;
+		  else 
+			  rate = 1;
+		  return wages;
+	  }
+  }
+5.N/A
+6. B.) !a || b
+7. The answers are below:
+  a. x && y || !a && !b
+  b. if (!x == 7 && !x>7)
+8. The answers are below:
+  a. if ((x+2>a || x-2 <b) && y >=0)
+  b. if ((a>=b && a>=c) && a%2==0)
+9. The answer is below:
+  if (Math.sqrt(x) <3.00 && x>7.00) 
+10. The answer is below:
+	  Int a, b, c;
+    If (a/b == b/c)
+	    return true;
+    Else
+	    return false;
