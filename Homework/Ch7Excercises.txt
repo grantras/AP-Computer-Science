@@ -36,3 +36,38 @@
 	    return true;
     Else
 	    return false;
+11. The answers are below:
+	a. boolean inside = !(x<left || x> right || y<top || y>bottom);
+	b. Boolean no = (ch [0] == ‘N’ && ch[1] == ‘O’ ||
+		 	 ch [0] == ‘n’ && ch[1] == ‘o’ ||
+		 	 ch [0] == ‘N’ && ch[1] == ‘o’ ||
+		 	 ch [0] == ‘n’ && ch[1] == ‘O’);
+14. if (avg < 100 && !value<90 )
+		grade = A;
+	else if (avg < 90 && !value<80 )
+		grade = ‘B’;
+	else if (avg < 80 && !value<70 )
+		grade = ‘C’
+	else if (avg < 70 && !value<60 )
+		grade = ‘D’;
+	else
+		grade = ‘F’;
+
+19. The answer is below:
+	public class Die
+	 {
+	   private int numDots;
+	   public void faces(n)
+	   {
+	     int faces = n;
+	     numDots = faces*21;
+	   }
+	   public void roll()
+	   {
+	     this.numDots = ((int)(6.0D * Math.random()) + 1);
+	   }
+	  public int getNumDots()
+	   {
+	     return this.numDots;
+	   }
+	}
