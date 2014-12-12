@@ -71,3 +71,15 @@
 	     return this.numDots;
 	   }
 	}
+21.The answers are below: 
+	a. The winning strategy is always to start first because you will have the last move.
+	b. 
+		public int computerMove (int nStones)
+		{
+  			if (nstones%2 = 0)
+    				system.out.println("Take 1, you dummy!");
+  			else
+    				system.out.println("You've already lost, assuming this is a 2 player game, so suck it up!")
+
+		}
+	c. int nStones = nStones - n;
