@@ -52,6 +52,7 @@ are granted by institutions in accordance with their own policies, not by the Co
 Board or the AP Program.
 
 **From me:**
+
 I have started this repo because of the numerous issues that I take up with the AP. The primary being that this is largely a course that favors recall and the ability to edit snippets rather than having true knowledge of Java. With that being said I have decided to commit all of our classwork, homework and projects here. The class currently being taught at WHS is based on "Java Methods Object-Oriented Programming and Data Structures, Second AP Edition- with GridWorld". With that in mind, all of the answers posted here correspond to excercise sets provided by the book.
 
 I have broken this repo down into three categories: projects, labs and homework. Any pertinent material covered in the class can be found here. I commit my answers and work in the hope that I create a good resource for those in the future to use and so that students will have a wholesome place to turn to when they are in need of answers/explanations rather than blatantly cheating. 
