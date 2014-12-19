@@ -1,0 +1,134 @@
+1. Answer below:
+public static void main (String args[]){
+        double year = 2010;
+        double population = 111200000;
+            while(population < 120000000){
+                population = population * 1.0113;
+                year ++;
+            System.out.println(year);
+          }  
+    }
+
+2. Answer below:
+  public class Test{
+  public static void main(String[] args) {
+   
+   double percentLearned = 0;
+   int months = 0;
+   
+   while (percentLearned < .95) {
+     percentLearned = percentLearned + ((1 - percentLearned)  * .1);
+     months++;
+     System.out.println("Percent Learned: " + percentLearned * 100 + " Months: " + months);
+   }
+ }
+}
+
+3. Answer below: 
+ static int addOdds(int n){
+    int total = 0;
+    for(int i = 1; i < n; i += 2){
+      total += i;
+    }
+    return total;
+  }
+ 
+5. Answer below:
+import java.util.Scanner;
+import java.lang.StringBuilder;
+ 
+public class Exercises
+{
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter a positive integer under 10: ");
+    int inputInt = input.nextInt();
+    input.close();
+   
+    if(inputInt >= 10){
+      System.out.println("The integer must be below 10.");
+      System.exit(0);
+    }
+   
+    StringBuilder output = new StringBuilder();
+    int total = 0;
+   
+    for(int i = 1; i <= inputInt; i++){
+      if(i == 1){
+        output.append("1 + ");
+      }
+      else if(i != inputInt){
+        output.append(i + " + ");
+      }
+      else{
+        output.append(i + " = ");
+      }
+     
+      total += i;
+    }
+    System.out.println(output.toString() + total);
+  }
+ 
+}
+ 
+7. Answer below:
+public static boolean isPerfectSquare(int n){
+    int total = 0;
+    for(int i = 1; total < n; i += 2){
+      total += i;
+    }
+   
+    if(total - n == 0){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+ 
+9. Answer below:
+import java.io.*;
+import java.util.Scanner;
+ 
+public class Exercises
+{
+  public static void main(String[] args)
+  {
+    Scanner input = null;
+ 
+    try
+    {
+      input = new Scanner(new File("scores.dat"));
+    }
+    catch (FileNotFoundException e)
+    {
+      System.out.println("***  Can't open scores.dat ***");
+      System.exit(1);
+    }
+   
+    int totalScore = 0;
+    int counter = 0;
+   
+    while(input.hasNextInt()){
+      totalScore += input.nextInt();
+      counter++;
+    }  
+    System.out.println("Average: " + (totalScore/counter));
+  }
+}
+ 
+11. Answer below:
+  public static void printStarTriangle(int n){
+    StringBuilder sb = new StringBuilder();
+    for(int i = 1; i <= n; i++){
+      if(i == 1){
+        sb.append("*");
+        System.out.println(sb.toString());
+      }
+      else{
+        sb.insert(0,"*");
+        sb.append("*");
+        System.out.println(sb.toString());
+      }
+    }
+  }
