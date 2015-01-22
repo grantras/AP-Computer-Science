@@ -194,4 +194,13 @@
 		}
 	}
 }
-18.
+18. System.out.prinln(Puzzle.message);
+19. View 7
+20. Answer below:
+	public class Distance {
+		public int distance (Location loc1, Location loc2){
+		double a = loc2-loc1;
+		double b = a*a;
+		double c= b/2;
+		}
+	}
