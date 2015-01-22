@@ -157,5 +157,41 @@
 }
 15. The class will not compile because the two swap methods will return different types. One could rename one of the methods to prevent this issue.
 16. https://github.com/cooperpellaton/AP-Computer-Science/tree/master/Labs/SnackBar
-
-
+17. Answer below:
+	public class Complex {
+	public static double real;
+	public static double imaginary;
+	
+	public Complex(double real){
+		System.out.println(real + "0I");
+	}
+	
+	public Complex (double real, double imagninary){
+		String ComplexNumber = Complex.real + Complex.imaginary +"i";
+		System.out.println(ComplexNumber);	
+	}
+	
+	public Complex abs (double real, double imaginary){
+		double a = Complex.real*Complex.real;
+		double b = Complex.imaginary*Complex.imaginary;
+		double c = a +b;
+		double absoluteValue = Math.sqrt(c);
+	}
+	
+	public Complex add (Complex other){
+		double a= Complex.real+other.real;
+		double b= complex.imaginary+other.imaginary;
+		System.out.println(double a + double b+i);
+	}
+	
+	public Complex multiply (Complex other){
+		double a= Complex.real*other.real;
+		double b= Complex.imaginary*other.real;
+		if (Complex.real <= 1){
+			return b=1;
+		}else{
+			return b=-1;
+		}
+	}
+}
+18.
