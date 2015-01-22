@@ -1,0 +1,161 @@
+1. public String replace (String str, char ch)
+2. Answers below:
+    F-- a no-args constructor is not specified.
+    T-- a the int parameter is promoted to double.
+    T-- both int parameters are promoted to double
+    T-- first arg is a double
+    T-- secondary argument will be promoted to double
+    T-- both are excepted double arguments
+3. E) There is no conflict -- all four can coexist
+4. The String class has a copy constructor [String(String value)], but the Color class does not.
+5. Answer below:
+  public Balloon() {
+	Color.radius = 10;
+  int red = 135;
+	int green = 206;
+	int blue = 250;
+	Color Skyblue = new Color(red, green, blue);
+  radius.setBackground(Color.Skyblue);
+6. Answer below:
+  public Fraction subtract(Fraction other)
+  {
+	  int newNum = num * other.denom - denom * other.num;
+	  int newDenom = denom * other.denom;
+	  return new Fraction (newNum, newDenom);
+  }
+  
+  public Fraction divide (Fraction other)
+  {
+	  int newNum = num * other.denom;
+	  int newDenom = denom * other.num;
+	  if (newDenom == 0) {
+		  throw new IllegalArgumentException("Yo, a fraction cannot have a denominator of 0!!");
+	  }else{
+	  return new Fraction (newNum, newDenom);
+	  }
+  }
+7.Answer below:
+  public class FCConverter {
+	Scanner kboard = new Scanner(System.in);
+	System.out.println("Input the temperature in either farenheit!");
+	double Celsius;
+	double Farenheit=sc.nextInt();
+	//this question makes no sense
+  }
+8. https://github.com/cooperpellaton/AP-Computer-Science/tree/master/Class-Projects/Craps
+9. Answers below:
+  a.
+    public Point (Point p)
+    {
+      double x = new Point(p.center);
+      double y = new Point(p.center);
+    }
+  b.
+    public Disk (Disk d)
+    {
+      center = new Point(d.center);
+    radius = d.radius;
+    }
+10. Answers are below:
+  import java.awt.*;
+  import java.swing.JComponent;
+  import java.swing.JFrame;
+  public class Rectangle extends JComponent {
+	Scanner kboard = new Scanner(System.in);
+	System.out.println("Input the height of the rectangle you would like to be drawn.")
+	int height = kboard.nextInt();
+	System.out.println("Input the height of the rectangle you would like to be drawn.")
+	int width = kboard.nextInt();
+	
+	public void Rectangle(Graphics g){
+		if(height >= 0 && width >= 1){
+			g.drawRect (height, height, width, width);
+		}else{
+			throw new IllegalArgumentException ("You dun goofed son!");
+		}
+	}
+	
+	public void Square (Graphics g){
+		if (height >= 0){
+			g.drawRect(height, height, height, height);
+			return boolean isSquare = true;
+			public double Quadratize (height){
+				double area = height*height;
+				g.drawSquare (area, area);
+			}
+		}else{
+			throw new IllegalArgumentException ("You dun goofed son!");
+		}
+	}
+	public void SquareFoU (Graphics g){
+		g.drawRect(1,1,1,1);
+	}
+}
+11. Answers below:
+    A.)Immutable
+    B.)Immutable
+    C.)Mutable
+    D.)Mutable
+12. The objects of the subclasses of Integer and String are not solely immutable. If the objects were passed to methods that rely on the immutability they would fail and the methods would not work properly. A classic example of inheritance.
+13. Answer below:
+  public class Time {
+	private int hours;
+	private int minutes;
+	public Time (int h, int m){
+		if (h<=12 && m<=60){
+			hours=h;
+			minutes=m;
+		}else{
+			throw new IllegalArgumentException("You playing fast and loose with time son!");	
+		}
+	}
+	private toMins(int minutes){
+		int elapsedMinutes = minutes;
+	}
+	public boolean lessThan (Time t){
+		if (Time < t){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public elapsedSince(Time t){
+		if (t<=time<= t+24){
+			int elapsedSince = t-time;
+		}else{
+			System.out.println("Whatcha thinking?? You can't have negative time.")
+		}
+	}
+	public toString (Time t){
+		String TimeFlies;
+		System.out.println(TimeFlies + Time);
+	}
+ }
+14. Answer below:
+	public class Coins {
+	private static int Quarters;
+	private static int Nickels;
+	private static int Dimes;
+	private static int Pennies;
+	
+	public void getQuarters(Coins.Quarters){
+		int QuarterCount = Quarters;
+	}
+	
+	public void getNickels(Coins.Nickels){
+		int NickelCount = Nickels;
+	}
+	
+	public void getDimes(Coins.Dimes){
+		int DimeCount = Dimes;
+	}
+	
+	public void getPennies(Coins.Pennies){
+		int PennyCount = Pennies;
+	}
+	
+}
+15. The class will not compile because the two swap methods will return different types. One could rename one of the methods to prevent this issue.
+16. https://github.com/cooperpellaton/AP-Computer-Science/tree/master/Labs/SnackBar
+
+
